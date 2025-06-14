@@ -8,19 +8,13 @@
   <script>
     window.addEventListener('scroll', () => {
       const header = document.querySelector('header');
-      if (window.scrollY > 10) {
-        header.classList.add('bg-[#0E637B]', 'shadow');
-        header.classList.remove('bg-transparent');
-      } else {
-        header.classList.remove('bg-[#0E637B]', 'shadow');
-        header.classList.add('bg-transparent');
-      }
+      header.classList.add('bg-[#0E637B]', 'shadow');
     });
   </script>
 </head>
 <body class="bg-white text-[#000000]">
   <!-- Cabeçalho -->
-  <header class="bg-transparent text-white p-4 flex justify-between items-center fixed w-full top-0 z-40 transition-all duration-300">
+  <header class="bg-[#0E637B] text-white p-4 flex justify-between items-center fixed w-full top-0 z-40 transition-all duration-300">
     <h1 class="text-2xl font-bold">VetView</h1>
     <nav class="space-x-4">
       <a href="#sobre" class="hover:underline">Sobre</a>
@@ -37,6 +31,7 @@
   <section class="bg-[#0E637B] text-white text-center py-20 px-4">
     <h2 class="text-4xl font-bold mb-4">Imagem Móvel para Clínicas Veterinárias</h2>
     <p class="text-lg mb-6">Raio-X, Ultrassom e Eletrocardiograma direto na sua clínica, sem precisar de equipamento próprio.</p>
+    <a href="https://wa.me/5511999999999" target="_blank" class="bg-white text-[#0E637B] font-semibold px-6 py-3 rounded-xl shadow hover:bg-gray-200 transition">Entrar em contato</a>
   </section>
 
   <!-- Sobre -->
@@ -51,16 +46,19 @@
       <h3 class="text-2xl font-bold mb-8 text-center">Serviços Oferecidos</h3>
       <div class="grid md:grid-cols-3 gap-8 text-center">
         <div>
-          <img src="/src/images/ultrassom.png" alt="Raio-X" class="mx-auto mb-4 rounded-xl">
+          <img src="/src/images/ultrasom.png" alt="Raio-X" class="mx-auto mb-4 rounded-xl">
           <h4 class="font-semibold text-lg">Raio-X</h4>
+          <p class="text-gray-700 mt-2">Imagens radiográficas que auxiliam na avaliação de ossos, tórax e órgãos internos.</p>
         </div>
         <div>
-          <img src="/src/images/ultrassom.png" alt="Ultrassom" class="mx-auto mb-4 rounded-xl">
+          <img src="/src/images/ultrasom.png" alt="Ultrassom" class="mx-auto mb-4 rounded-xl">
           <h4 class="font-semibold text-lg">Ultrassom</h4>
+          <p class="text-gray-700 mt-2">Visualização em tempo real de tecidos moles, gestação e alterações abdominais.</p>
         </div>
         <div>
-          <img src="/src/images/ultrassom.png" alt="Eletrocardiograma" class="mx-auto mb-4 rounded-xl">
+          <img src="/src/images/ultrasom.png" alt="Eletrocardiograma" class="mx-auto mb-4 rounded-xl">
           <h4 class="font-semibold text-lg">Eletrocardiograma</h4>
+          <p class="text-gray-700 mt-2">Registro da atividade elétrica do coração, importante no diagnóstico cardíaco.</p>
         </div>
       </div>
     </div>
@@ -73,7 +71,7 @@
       <li>✓ Atendimento rápido no local</li>
       <li>✓ Sem necessidade de comprar equipamentos caros</li>
       <li>✓ Exames de alta qualidade com profissionais experientes</li>
-      <li>✓ Relatórios rápidos e precisos</li>
+      <li>✓ Diagnósticos rápidos e precisos</li>
     </ul>
   </section>
 
