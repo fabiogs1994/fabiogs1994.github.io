@@ -5,10 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>VetView - Imagem Móvel Veterinária</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    window.addEventListener('scroll', () => {
+      const header = document.querySelector('header');
+      if (window.scrollY > 10) {
+        header.classList.add('bg-[#0E637B]', 'shadow');
+      } else {
+        header.classList.remove('bg-[#0E637B]', 'shadow');
+      }
+    });
+  </script>
 </head>
 <body class="bg-white text-[#000000]">
   <!-- Cabeçalho -->
-  <header class="bg-[#0E637B] text-white p-4 flex justify-between items-center fixed w-full top-0 z-40 shadow">
+  <header class="text-white p-4 flex justify-between items-center fixed w-full top-0 z-40 transition-all duration-300">
     <h1 class="text-2xl font-bold">VetView</h1>
     <nav class="space-x-4">
       <a href="#sobre" class="hover:underline">Sobre</a>
@@ -17,7 +27,10 @@
       <a href="#depoimentos" class="hover:underline">Depoimentos</a>
     </nav>
   </header>
-  
+
+  <!-- Espaço compensando navbar fixa -->
+  <div class="h-20"></div>
+
   <!-- Hero -->
   <section class="bg-[#0E637B] text-white text-center py-20 px-4">
     <h2 class="text-4xl font-bold mb-4">Imagem Móvel para Clínicas Veterinárias</h2>
@@ -79,9 +92,9 @@
     </div>
   </section>
 
-  <!-- Botão WhatsApp fixo com destaque -->
+  <!-- Botão WhatsApp fixo com destaque e borda -->
   <a href="https://wa.me/5511999999999" target="_blank" class="fixed bottom-4 right-4 z-50">
-    <div class="bg-green-500 rounded-full p-4 shadow-lg hover:scale-105 transition-transform">
+    <div class="bg-green-500 border-2 border-black rounded-full p-4 shadow-lg hover:scale-105 transition-transform">
       <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="w-8 h-8">
     </div>
   </a>
