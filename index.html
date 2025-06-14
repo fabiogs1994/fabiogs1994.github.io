@@ -14,9 +14,14 @@
 </head>
 <body class="bg-white text-[#000000]">
   <!-- Cabeçalho -->
-  <header class="bg-[#0E637B] text-white p-4 flex justify-between items-center fixed w-full top-0 z-40 transition-all duration-300">
+  <header class="bg-[#0E637B] text-white p-4 flex items-center justify-between fixed w-full top-0 z-40 transition-all duration-300">
     <h1 class="text-2xl font-bold">VetView</h1>
-    <nav class="space-x-4">
+    <button class="md:hidden" id="menu-button">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+    </button>
+    <nav class="hidden md:flex space-x-4" id="menu-nav">
       <a href="#sobre" class="hover:underline">Sobre</a>
       <a href="#servicos" class="hover:underline">Serviços</a>
       <a href="#beneficios" class="hover:underline">Benefícios</a>
@@ -24,8 +29,24 @@
     </nav>
   </header>
 
+  <!-- Menu Mobile -->
+  <div class="md:hidden fixed top-16 left-0 w-full bg-[#0E637B] text-white hidden flex-col space-y-4 p-4 z-30" id="mobile-menu">
+    <a href="#sobre" class="hover:underline block">Sobre</a>
+    <a href="#servicos" class="hover:underline block">Serviços</a>
+    <a href="#beneficios" class="hover:underline block">Benefícios</a>
+    <a href="#depoimentos" class="hover:underline block">Depoimentos</a>
+  </div>
+
+  <script>
+    const menuButton = document.getElementById('menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuButton.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+
   <!-- Espaço compensando navbar fixa -->
-  <div class="h-10"></div>
+  <div class="h-20"></div>
 
   <!-- Hero -->
   <section class="bg-[#0E637B] text-white text-center py-20 px-4">
