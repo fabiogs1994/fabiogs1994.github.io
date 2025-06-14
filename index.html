@@ -25,7 +25,7 @@
 </head>
 <body class="bg-white text-[#000000]">
   <!-- Cabeçalho -->
-  <header class="bg-[#0E637B] text-white py-4 flex items-center justify-between fixed w-full top-0 z-40 transition-all duration-300">
+  <header class="bg-[#0E637B] text-white py-4 flex items-center justify-between fixed w-full top-0 z-40 transition-all duration-300 px-4 md:px-10">
     <h1 class="text-2xl font-bold">VetView</h1>
     <button class="md:hidden" id="menu-button">
       <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -54,6 +54,12 @@
     menuButton.addEventListener('click', () => {
       mobileMenu.classList.toggle('hidden');
     });
+
+    document.querySelectorAll('#mobile-menu a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
   </script>
 
   <!-- Espaço compensando navbar fixa -->
@@ -62,14 +68,14 @@
   <!-- Hero -->
   <section class="bg-[#0E637B] text-white text-center py-20 px-4">
     <h2 class="text-4xl font-bold mb-4">Imagem Móvel para Clínicas Veterinárias</h2>
-    <p class="text-lg mb-6">Raio-X, Ultrassom e Eletrocardiograma direto na sua clínica, sem precisar de equipamento próprio.</p>
+    <p class="text-lg mb-6">Raio-X, Ultrassom e Eletrocardiograma direto na sua clínica, sem precisar de equipamento próprio. Nosso compromisso vai além da tecnologia: um dos pilares da VetView é também o cuidado e a valorização da vida dos animais.</p>
     <a href="https://wa.me/5545999422984" target="_blank" class="bg-white text-[#0E637B] font-semibold px-6 py-3 rounded-xl shadow hover:bg-gray-200 transition">Entrar em contato</a>
   </section>
 
   <!-- Sobre -->
   <section id="sobre" class="py-16 px-4 max-w-4xl mx-auto">
     <h3 class="text-2xl font-bold mb-4">Sobre a VetView</h3>
-    <p class="text-gray-700 text-lg">A VetView é especializada em levar tecnologia de imagem veterinária diretamente às clínicas que não possuem estrutura própria. Nossos profissionais são treinados para oferecer exames precisos, com agilidade e qualidade.</p>
+    <p class="text-gray-700 text-lg">A VetView é especializada em levar tecnologia de imagem veterinária diretamente às clínicas que não possuem estrutura própria. Nossos profissionais são treinados para oferecer exames precisos, com agilidade e qualidade — sempre guiados pelo respeito à vida animal, que é um dos nossos principais valores.</p>
   </section>
 
   <!-- Serviços -->
@@ -104,6 +110,7 @@
       <li>✓ Sem necessidade de comprar equipamentos caros</li>
       <li>✓ Exames de alta qualidade com profissionais experientes</li>
       <li>✓ Diagnósticos rápidos e precisos</li>
+      <li>✓ Compromisso com o bem-estar e a vida dos animais</li>
     </ul>
   </section>
 
